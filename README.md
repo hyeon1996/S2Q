@@ -22,7 +22,7 @@ bash install_dependencies.sh
 bash install_sc2.sh
 ```
 
-6. Install Google Research Football:
+5. Install Google Research Football:
 ```
 bash install_gfootball.sh
 ```
