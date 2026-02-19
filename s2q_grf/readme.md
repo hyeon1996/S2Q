@@ -4,15 +4,6 @@
 
 ```shell
 
-# SMAC-Hard+
-python3 s2q_smac/src/main.py --config=qmix_att --env-config=sc2 with env_args.map_name="5m_vs_6m"
-
-# SMAC-Comm
-python3 s2q_smac/src/main.py --config=s2q_comm --env-config=sc2 with env_args.map_name="1o_2r_vs_4r"
-
-# SMACv2
-python3 s2q_smac/src/main.py --config=s2q --env-config=sc2v2 with env_args.map_name="terran_5_vs_5"
-
 # GRF
 python3 s2q_grf/src/main.py --config=s2q --env-config=grf with env_args.map_name=academy_3_vs_2
 
