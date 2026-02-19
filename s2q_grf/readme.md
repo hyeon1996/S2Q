@@ -1,35 +1,3 @@
-
-
-# Successive Sub-value Q-learning (S2Q)
-
-This is the implementation of S2Q accompanying "RETAINING SUBOPTIMAL ACTIONS TO
-FOLLOW SHIFTING OPTIMA IN MULTI-AGENT REINFORCEMENT LEARNING"
-
-
-## Installation instructions
-
-Install Python packages
-
-```shell
-# require Anaconda 3 or Miniconda 3
-conda create -n s2q python=3.8 -y
-conda activate s2q
-
-bash install_dependencies.sh
-```
-
-Installing SMAC:
-
-```shell
-bash install_sc2.sh
-```
-
-Installing Google Research Football:
-
-```shell
-bash install_gfootball.sh
-```
-
 ## Command Line Tool
 
 **Run experiments**
