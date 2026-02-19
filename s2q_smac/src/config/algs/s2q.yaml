@@ -1,0 +1,47 @@
+# --- QMIX specific parameters ---
+
+# use epsilon greedy action selector
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 100000 # 500000 for 6h_vs_8z
+evaluation_epsilon: 0.0
+
+runner: "parallel"
+batch_size_run: 8
+buffer_size: 5000
+batch_size: 128
+
+t_max: 10050000
+
+# update the target network every {} episodes
+target_update_interval: 200
+
+# use the Q_Learner to train
+mac: "n_mac"
+agent: "n_rnn"
+agent_output_type: q
+
+learner: "sq_learner"
+mixer: "qmix"
+mixing_embed_dim: 32
+hypernet_embed: 64
+lr: 0.001 # Learning rate for agents
+td_lambda: 0.6
+optimizer: 'adam'
+use_rnn: True
+
+central_mixing_embed_dim: 256
+central_action_embed: 1
+central_mac: "basic_central_mac"
+central_agent: "central_rnn"
+central_rnn_hidden_dim: 64
+central_mixer: "ff"
+
+K: 2
+T: 0.1
+w_c: 0.9
+
+grad_norm_clip: 10.0
+
+name: "S2Q"
