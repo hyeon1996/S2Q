@@ -1,35 +1,3 @@
-
-
-# Successive Sub-value Q-learning (S2Q)
-
-This is the implementation of S2Q accompanying "RETAINING SUBOPTIMAL ACTIONS TO
-FOLLOW SHIFTING OPTIMA IN MULTI-AGENT REINFORCEMENT LEARNING"
-
-
-## Installation instructions
-
-Install Python packages
-
-```shell
-# require Anaconda 3 or Miniconda 3
-conda create -n s2q python=3.8 -y
-conda activate s2q
-
-bash install_dependencies.sh
-```
-
-Installing SMAC:
-
-```shell
-bash install_sc2.sh
-```
-
-Installing Google Research Football:
-
-```shell
-bash install_gfootball.sh
-```
-
 ## Command Line Tool
 
 **Run experiments**
@@ -45,9 +13,6 @@ python3 s2q_smac/src/main.py --config=s2q_comm --env-config=sc2 with env_args.ma
 # SMACv2
 python3 s2q_smac/src/main.py --config=s2q --env-config=sc2v2 with env_args.map_name="terran_5_vs_5"
 
-# GRF
-python3 s2q_grf/src/main.py --config=s2q --env-config=grf with env_args.map_name=academy_3_vs_2
-
 ```
 
 The default setups for an algorithm or environment is represented as config files located in `src/config`.
@@ -55,10 +20,3 @@ The default setups for an algorithm or environment is represented as config file
 They are all located in `src/config`.
 `--config` refers to the config files in `src/config/algs`
 `--env-config` refers to the config files in `src/config/envs`
-
-
-To enable experiment tracking with WandB, enter following configurations in `src/config/default.yaml`:
-
-use_wandb: # Log results to W&B
-wandb_team: # W&B team name
-wandb_project: W&B project name
